@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: mirror.gcr.io/library/nginx:1.27.0
+          image: mirror.gcr.io/library/nginx:1.31.4
           ports:
             - name: http
               containerPort: 80
