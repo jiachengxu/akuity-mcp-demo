@@ -10,5 +10,6 @@ spec:
   subscriptions:
     - image:
         repoURL: nginx
+        discoveryLimit: 10
         allowTagsRegexes:
           - '^1\.\d+\.\d+$'
