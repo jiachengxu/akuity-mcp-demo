@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-prod
+  annotations:
+    kargo.akuity.io/authorized-stage: "demo:prod"
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jiachengxu/akuity-mcp-demo.git
+    targetRevision: main
+    path: envs/prod
+  destination:
+    name: demo-mcp
+    namespace: demo-prod
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
